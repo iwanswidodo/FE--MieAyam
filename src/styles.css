@@ -1,0 +1,9 @@
+* { box-sizing: border-box; }
+:root { font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #493326; background: #f7f1e8; font-synthesis: none; text-rendering: optimizeLegibility; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+.shell { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+.welcome { width: min(100%, 680px); padding: 40px; border: 1px solid #e7d9c8; border-radius: 24px; background: #fffdf9; box-shadow: 0 18px 60px #49332612; }
+.eyebrow { color: #a4774d; font-size: 12px; font-weight: 800; letter-spacing: .14em; }
+h1 { margin: 14px 0 8px; font-size: clamp(32px, 6vw, 48px); }
+p { line-height: 1.65; }
+.muted { color: #806f62; }
