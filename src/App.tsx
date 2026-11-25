@@ -2,7 +2,7 @@ import {useEffect, useMemo, useState, type FormEvent} from 'react';
 
 type Product={id:number;name:string;category:string;variant:string;description:string;price:number;imageUrl:string;active:boolean};
 type Draft={name:string;category:string;variant:string;description:string;price:string};
-const API=(import.meta.env.VITE_API_BASE_URL||'http://localhost:8080').replace(/\/$/,'');
+const API=((import.meta as ImportMeta & {env?:{VITE_API_BASE_URL?:string}}).env?.VITE_API_BASE_URL||'http://localhost:8080').replace(/\/$/,'');
 const empty:Draft={name:'',category:'Mie Ayam',variant:'',description:'',price:''};
 const money=(n:number)=>new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(n);
 const categories=['Mie Ayam','Mie Jebew','Pangsit','Minuman','Add On'];
